@@ -24,7 +24,8 @@ class _ClockLoaderState extends State<ClockLoader>
       vsync: this,
       duration: const Duration(milliseconds: 8000),
     )
-      ..forward()..repeat();
+      ..forward()
+      ..repeat();
     tickAnimation = Tween<double>(
       begin: 0,
       end: 4 * math.pi,
@@ -63,7 +64,6 @@ class _ClockLoaderState extends State<ClockLoader>
                 if (tickAnimation.value - 2 * math.pi < finalAngle) {
                   return finalAngle;
                 }
-
                 return tickAnimation.value;
               }();
               double yDefaultPosition = -index * squareSize;
@@ -71,11 +71,9 @@ class _ClockLoaderState extends State<ClockLoader>
                 if (rotate == finalAngle) {
                   return -tickLength * squareSize;
                 }
-
                 if (tickAnimation.value > 2 * math.pi) {
                   return (index - tickLength) * squareSize;
                 }
-
                 return yDefaultPosition;
               }();
               return TweenAnimationBuilder(

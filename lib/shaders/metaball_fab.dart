@@ -80,7 +80,7 @@ class _MetaballFABState extends State<MetaballFAB>
               ),
             ),
             Positioned(
-              top: mainButtonPos.dy -100,
+              top: mainButtonPos.dy - 100,
               left: mainButtonPos.dx - 90,
               child: GestureDetector(
                 onTap: () {
